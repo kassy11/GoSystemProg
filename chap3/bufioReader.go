@@ -20,4 +20,12 @@ func main() {
 			break
 		}
 	}
+
+	fmt.Println("------------------------------")
+
+	// 終端を気にせずもっと短く書くには、bufio.NewScannerを使う
+	scanner := bufio.NewScanner(strings.NewReader(source))
+	for scanner.Scan() {
+		fmt.Printf("%#v\n", scanner.Text())
+	}
 }

@@ -11,6 +11,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	conn.Write([]byte("GET / HTTP/1.0\r\nHostl ascii\r\n.jp\r\n\r\n"))
+	conn.Write([]byte("GET / HTTP/1.0\r\nHost: ascii.jp\r\n\r\n"))
 	io.Copy(os.Stdout, conn)
 }
